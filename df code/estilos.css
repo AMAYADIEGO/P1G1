@@ -1,18 +1,16 @@
 table {
-    border: pink 1px solid;
+    border: rgb(0, 0, 0) 5px solid;
     width: 100%;
 }
 
-td 
+td,
 th {
-    border:green 1px solid;
+    border:rgb(36, 78, 167) 3px solid;
 }
 td {
     width: 25%;
 }
-tr{
-    height: 100px;
-}
+
 tr {
     height: 50px;
 }
