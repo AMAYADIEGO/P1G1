@@ -13,7 +13,10 @@
     <h1>CALCULADORA ESTÁNDAR</h1>
     <table>
         <tr>
-            <td colspan="4">RESULTADO</td>
+            <td colspan="4">
+                <input id="resultado"
+                 type="text" placeholder="0" >
+            </td>
         </tr>
 
         <tr>
@@ -28,8 +31,8 @@
                 </button>
             </td>
             <td>
-                <button onclick="MOD()">
-                    MOD
+                <button onclick="borrar()">
+                    Borrar
                 </button>
             </td>
             <td>
@@ -41,17 +44,17 @@
 
         <tr>
             <td>
-                <button onclick="siete()">
+                <button onclick="numero(7)">
                     7
                 </button>
             </td>
             <td>
-                <button onclick="ocho()">
+                <button onclick="numero(8)">
                     8
                 </button>
             </td>
             <td>
-                <button onclick="nueve()">
+                <button onclick="numero(9)">
                     9
                 </button>
             </td>
@@ -64,55 +67,71 @@
 
         <tr>
             <td>
-                <button onclick="cuatro()">
+                <button onclick="numero(4)">
                     4
                 </button>
             </td>
             <td>
-                <button onclick="cinco()">
+                <button onclick="numero(5)">
                     5
                 </button>
             </td>
             <td>
-                <button onclick="seis()">
+                <button onclick="numero(6)">
                     6
                 </button>
             </td>
             <td>
                 <button onclick="menos()">
-                    menos
+                    restar
                 </button>
             </td>
         </tr>
 
         <tr>
             <td>
-                <button onclick="uno()">
+                <button onclick="numero(1)">
                     1
                 </button>
             </td>
             <td>
-                <button onclick="dos()">
+                <button onclick="numero(2)">
                     2
                 </button>
             </td>
             <td>
-                <button onclick="tres()">
+                <button onclick="numero(3)">
                     3
                 </button>
             </td>
             <td>
                 <button onclick="mas()">
-                    mas
+                    sumar
                 </button>
             </td>
         </tr>
 
         <tr>
-            <td>+/-</td>
-            <td>0</td>
-            <td>MOD</td>
-            <td>igual</td>
+            <td>
+                <button onclick="masMenos()">
+                +/-
+            </button>   
+            </td>
+            <td>
+                <button onclick="numero(0)">
+                0
+             </button>   
+            </td>
+            <td>
+                <button onclick="MOD()">
+                MOD
+            </button>
+            </td>
+            <td>
+                <button onclick="igual()">
+                igual
+            </button>
+            </td>
         </tr>
     </table>
 
@@ -213,6 +232,11 @@
 <h2>13. Calcular N promedio de notas </h2>
 <button onclick="promedioNdeNotas()">
     Calcular N promedio de notas
+</button>
+
+<h2>14. Ejemplo de Funcion con return </h2>
+<button onclick="FuncionConReturn()">
+    Ejemplo de Funcion con return
 </button>
 
 </body>
