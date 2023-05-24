@@ -19,7 +19,7 @@ function factorialN() {
     }
 }
 
-function factorialN(N) {
+function calcularfactorial(N) {
    //var N = prompt("Ingrese N", 3)
     var i = 1
     var resp = 1
@@ -335,7 +335,10 @@ function adjuntarValor(numero){
     darValor(juntarNumeros)
 }
 function factorial(){
-    alert("soy factorial")
+    var N = obtenerValor()
+    var resultadoFact = calcularfactorial(N)
+    darValor(resultadoFact)
+    //alert("soy factorial")
 }
 function potencia(){
     alert("soy potencia")
