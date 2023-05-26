@@ -1,4 +1,12 @@
+///////// variabes
+var A = 0
+var operaciones = ""
 
+
+
+
+
+//////////funciones
 function factorialN() {
     var N = prompt("Ingrese N", 3)
     var i = 1
@@ -18,6 +26,8 @@ function factorialN() {
 
     }
 }
+
+
 
 function calcularfactorial(N) {
    //var N = prompt("Ingrese N", 3)
@@ -71,6 +81,7 @@ function menorAyB(){
     } 
 }
 
+
 function obtenerDIV(){
     var A = parseInt(prompt("Ingrese A",10))
     var B = parseInt(prompt("Ingrese B",7))
@@ -78,6 +89,7 @@ function obtenerDIV(){
     resultado = A / B
     alert(parseInt(resultado))
 }
+
 
 function obtenerMOD(){
     var A = parseInt(prompt("Ingrese A",10))
@@ -167,11 +179,15 @@ function ifAbreviado(){
 
 function obtenerCantidadDigN_FOR(){
     var N = parseInt(prompt("Ingrese N",))
-    var cantidad = 0
+     cantidad = 0
+     if(N == 0){
+        alert("digitos: " + 1)
+     }else{
     for (cantidad  = 0 ; N != 0; cantidad++) {
         N = parseInt(N / 10)
     }
     alert("digitos: " + cantidad)
+    }
 }
 
 //Practico Segundo Parcial
@@ -187,6 +203,7 @@ function mostrarDigitosImpares() {
     }
 }
 
+
 function mostrarSuma1_10() {
     sum = 0
     ini = 1
@@ -198,11 +215,13 @@ function mostrarSuma1_10() {
     alert("sumatoria de 1 a 10: " + sum)
 }
 
+
+
 function calcularAreaVolumenDeCilindro() {
     var R = parseInt(prompt("Ingrese el radio: ", 3))
     var H = parseInt(prompt("Ingrese la altura: ", 5))
-    var area = 2 * Math.PI * R * (R + H)
-    var volumen = Math.PI * Math.pow(R, 2) * H
+    area = 2 * Math.PI * R * (R + H)
+     volumen = Math.PI * R * R * H
     alert("area: " + area + " volumen: " + volumen)
 }
 
@@ -274,7 +293,7 @@ function sumarNrosEntreAyB() {
 }
 
 
-function promedioNdeNotas() {
+function romedioNdeNotas() {
     var N = parseInt(prompt("Ingrese N", 15))
     var sumaNota = 0
     var i = 0
@@ -284,6 +303,24 @@ function promedioNdeNotas() {
         sumaNota = sumaNota + nota
     }
     alert(sumaNota/N)
+}
+
+function promedioNdeNotas() {
+    var N = parseInt(prompt("Ingrese N: ", 10))
+    var sum = 0
+    var notasvalidas = 0
+    var i = 1
+    var nota
+
+    while(i <= N){
+         nota = parseInt(prompt("Ingrese Nota " + i + ""))
+    if(nota > 51){
+        sum = sum + nota
+        notasvalidas = notasvalidas + 1
+    }
+        i = i +1
+    }
+    alert("El promedio de " + notasvalidas + " notas válidas es: " + sum / notasvalidas)
 }
 
 var myVariableGlobal = "hola mundo"
@@ -341,7 +378,10 @@ function factorial(){
     //alert("soy factorial")
 }
 function potencia(){
-    alert("soy potencia")
+    A = obtenerValor()
+    darValor("")
+    operaciones = "potencia"
+    //alert("soy potencia")
 }
 function borrar(){
     var vacio = ""
@@ -349,21 +389,31 @@ function borrar(){
     //alert("soy borrar")
 }
 function dividir(){
-    alert("soy dividir")
+    A = obtenerValor()
+    darValor("")
+    operaciones = "dividir"
+    //alert("soy dividir")
 }
 function numero(dig){
     adjuntarValor(dig)
     //alert("soy numero " + dig)
 }
 function multiplicar(){
-    alert("soy multiplicar")
+    A = obtenerValor()
+    darValor("")
+    operaciones = "multiplicar"
+    //alert("soy multiplicar")
 }
 function menos(){
-    alert("soy restar")
+    A = obtenerValor()
+    darValor("")
+    operaciones = "menos"
+    //alert("soy restar")
 }
 function mas(){
-
-
+    A = obtenerValor()
+    darValor("")
+    operaciones = "mas"
     //alert("soy sumar")
 }
 function masMenos(){
@@ -384,8 +434,57 @@ function masMenos(){
 }
 
 function MOD(){
-    alert("soy MOD")
+    A = obtenerValor()
+    darValor("")
+    operaciones = "MOD"
+    //alert("soy MOD")
 }
 function igual(){
-    alert("soy igual")
+    var B = obtenerValor()
+    if(operaciones == "potencia"){
+        var res = NpotenciaP_conParametros(A , B)
+        darValor(res)
+    }
+    if(operaciones == "MOD"){
+        var res = A % B
+        darValor(res)
+    }
+    if(operaciones == "multiplicar"){
+        var res = A * B
+        darValor(res)
+    }
+    if(operaciones == "mas"){
+        var res = parseInt(A) + parseInt(B)
+        darValor(res)
+    }
+    if(operaciones == "menos"){
+        var res = A - B
+        darValor(res)
+    }
+    if(operaciones == "dividir"){
+        var res = A / B
+        darValor(res)
+    }
+    //alert("soy igual")
+}
+
+function NpotenciaP(){
+    var N = parseInt(prompt("ingrese n " ,4))
+    var P = parseInt(prompt("ingrese n " ,7))
+    var i = 1 , res =1
+    while(i <= P){
+        res = res * N
+        i++
+    }
+    alert(res)
+}
+
+function NpotenciaP_conParametros(N , P){
+    var i = 1 , res =1
+    while(i <= P){
+        res = res * N
+        i++
+    }
+    return(res)
+    //alert(res)
 }
